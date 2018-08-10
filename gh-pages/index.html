@@ -1,0 +1,73 @@
+<!--
+Nav Drawer and Menu - Pure CSS
+
+Using *only* Sassy CSS without any dependencies,
+the following is a navigation drawer and hamburger
+with animations.
+
+Written by Grey B aka Vapurrmaid
+
+email: vapurrmaid@gmail.com
+Git: https://github.com/vapurrmaid
+Mixcloud: https://mixcloud.com/vapurrmaid
+SoundCloud: https://soundcloud.com/user-329964330
+Medium: https://medium.com/@vapurrmaid
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- .navigation = Navigation Menu + Drawer Container -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__cbox" id="DrawerToggle"/>
+      <label class="navigation__hamburger-box" for="DrawerToggle">
+        <span class="navigation__hamburger">&nbsp;</span>
+      </label>
+      <!-- Drawer -->
+      <nav class="navigation__nav">
+        <ul class="navigation__nav__list">
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 1</a></li>
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 2</a></li>
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 3</a></li>
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 4</a></li>
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 5</a></li>
+          <li class="navigation__nav__list__item"><a href="#" class="navigation__link">Link 6</a></li>
+        </ul>
+      </nav>
+      <!-- Overlay -->
+      <div class="overlay navigation__overlay"/>
+    </div>
+
+    <!-- .header = Header w Logo -->
+    <header class="header">
+     <div class="header__logo-box">
+      <h1 class="header__logo">App</h1>
+     </div>
+    </header>
+
+    <!-- .main = Rows of filler Content -->
+    <main class="main">
+      <div class="row">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aspernatur, quis voluptate ipsa, temporibus labore minus illo culpa dolorum natus dolore ipsam nobis modi debitis molestias earum architecto doloribus cum?</p>
+      </div>
+      <div class="row">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quis, eius. Repellat ut delectus sint odio repellendus doloremque quia quos, explicabo, quod necessitatibus velit illo! Soluta asperiores vel labore dolorum.</p>
+      </div>
+      <div class="row">
+        <p>Ut placeat commodi reprehenderit fugiat vero dolore, ipsum doloremque quam, amet ipsa repellendus tempora ratione molestiae officia aspernatur nesciunt eos. Labore temporibus minus ea eaque, ipsam adipisci, similique odit fugiat.</p>
+      </div>
+      <div class="row">
+        <p>Fuga eligendi, molestiae autem earum error cum vitae nulla, sed eos inventore aliquam doloribus corrupti. Doloribus possimus nemo sequi autem id vero ipsa, voluptas nostrum odit commodi adipisci beatae iusto.</p>
+      </div>
+      <div class="row">
+        <p>Omnis porro nisi ratione sed, ad, dolorum fuga totam voluptates rerum quasi incidunt odio exercitationem. Ad pariatur vel praesentium, est, dolor eligendi qui at repudiandae delectus natus corporis, reiciendis odit!</p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+// UNIVERSAL RESET
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+// HTML RESET - SET 1REM = 10px
+html { font-size: 62.5%; }
+
+// BODY RESET - SET DEFAULT FONT AND BOX-SIZING
+body {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	padding: 0;
+}

@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'animations';
+
+@import 'base';
+@import 'utils';
+
+@import 'navigation';
+@import 'header';
+
+// being lazy here
+// MAIN - filler content
+.main { margin-top: $main-margin-top; }

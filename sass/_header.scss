@@ -1,0 +1,24 @@
+.header {
+	height: $header-height;
+
+	// position relative in order to center logo
+	position: relative;
+
+	background-color: $color-black;
+
+	// cenetered logo
+	&__logo-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	&__logo {
+		color: $color-grey-light;
+		font-size: 3.6rem;
+		letter-spacing: 1rem;
+		text-transform: uppercase;
+	}
+}

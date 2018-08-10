@@ -1,0 +1,46 @@
+{
+  "name": "sassy-nav-drawer",
+  "version": "0.1.0",
+  "description": "A Navigation Drawer built with pure CSS",
+  "scripts": {
+    "clean": "rimraf *.css gh-pages/*.css",
+    "compile": "node-sass sass/main.scss style.compiled.css",
+    "prefix": "postcss style.compiled.css --use autoprefixer -o style.prefixed.css",
+    "compress": "node-sass --output-style compressed style.prefixed.css gh-pages/style.css",
+    "clean:intermediates": "rimraf *.compiled.css *.prefixed.css",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run compress && npm run clean:intermediates",
+    "dev": "concurrently \"node server.js\" \"node-sass sass/main.scss gh-pages/style.css --watch\"",
+    "start": "concurrently \"node server.js\" \"start chrome http://localhost:3000/ --exit\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vapurrmaid/sassy-nav-drawer.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "navigation",
+    "navigation",
+    "drawer"
+  ],
+  "author": {
+    "name": "Vapurrmaid",
+    "email": "vapurrmaid@gmail.com",
+    "url": "https://github.com/vapurrmaid"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vapurrmaid/sassy-nav-drawer/issues"
+  },
+  "homepage": "https://github.com/vapurrmaid/sassy-nav-drawer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.0"
+  },
+  "private": true
+}

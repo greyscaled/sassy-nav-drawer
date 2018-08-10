@@ -1,0 +1,6 @@
+# devDependencies
+node_modules
+
+# build steps
+*.compiled.css
+*.prefixed.css

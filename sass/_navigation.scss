@@ -1,0 +1,139 @@
+.navigation {
+	// hides the checkbox
+	&__cbox { display: none; }
+
+	// positions the hmbrgr menu top left corner
+	&__hamburger-box {
+		width: $hamburger-width;
+		height: $hamburger-width;
+
+		position: absolute;
+		top: 2.5rem;
+		left: 3rem;
+
+		cursor: pointer;
+		text-align: center;
+		z-index: $z-highest; // make sure it's top layer
+	}
+
+	// the 3 'buns' or lines of the hamburger
+	&__hamburger {
+		// set relative in order to adjust top and bottom lines
+		position: relative;
+		// this defines the middle line relative to .__hamburger-box
+		margin-top: 2rem;
+
+		// give all 3 lines same style
+		&,
+		&::before,
+		&::after {
+			width: $hamburger-width;
+			height: 2px;
+
+			display: block;
+
+			background-color: $color-white;
+		}
+
+		// without content, before/after collapse
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+		}
+
+		// top and bottom spacing relative to 'middle' bun
+		&::before { top: -1.1rem; }
+		&::after { top: 1.1rem; }
+	}
+
+	// if the menu is checked, transform hamburger top/bot
+	// into arrow heads
+	&__cbox:checked + &__hamburger-box &__hamburger::before {
+		animation: topToArrow 0.5s forwards ease-in-out;
+	}
+
+	&__cbox:checked + &__hamburger-box &__hamburger::after {
+		animation: botToArrow 0.5s forwards ease-in-out;
+	}
+
+	// if the menu is unchecked, transform arrow heads into
+	// top/bot hamburger bunes/lines
+	&__cbox:not(:checked) + &__hamburger-box &__hamburger::before {
+		animation: arrowToTop 0.5s ease-in;
+	}
+
+	&__cbox:not(:checked) + &__hamburger-box &__hamburger::after {
+		animation: arrowToBot 0.5s ease-in;
+	}
+
+	// Navigation Drawer - fills screen below header
+	&__nav  {
+		height: 100%;
+
+		position: absolute;
+		top: $header-height;
+		z-index: $z-highest;
+
+		// collapse and add animation
+		opacity: 0;
+		width: 0;
+		transform: translateX(calc(#{$drawer-width} * -1));
+		transition: all .5s ease-in-out;
+
+		background-color: $color-black;
+		box-shadow: 1rem 0 1rem rgba($color-black, .15);
+
+		// navigation drawer - ul
+		&__list {
+			padding-top: $nav-list-padding;
+			list-style: none;
+			margin-bottom: 1rem;
+
+			// navigation drawer - li
+			&__item {
+				padding-left: calc(#{$nav-list-padding} + 1rem);
+				&:not(:last-child) { margin-bottom: 2rem; }
+			}
+		}
+	}
+
+	// when checkbox is checked, un-collapse the drawer
+	&__cbox:checked ~ &__nav {
+		opacity: 1;
+		transform: translateX(0);
+		width: $drawer-width;
+	}
+
+	// navigation link
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-grey-light;
+			font-size: $nav-link-font-size;
+			letter-spacing: 0.5rem;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		&:hover {
+			box-shadow: 0 1px 0 rgba($color-white, .25);
+		}
+	}
+
+	// overlay covers body when drawer is open
+	&__overlay {
+		transition: opacity 0.5s ease-in;
+		opacity: 0;
+
+		// initially collapsed
+		width: 0;
+		z-index: -1;
+	}
+
+	&__cbox:checked ~ &__overlay {
+		opacity: 1;
+		width: 100vw;
+		z-index: $z-overlay
+	}
+}	

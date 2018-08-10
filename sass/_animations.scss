@@ -1,0 +1,58 @@
+@keyframes topToArrow {
+    0% { top: -1rem; }
+
+    50% {
+      transform: rotate(0);
+      width: $hamburger-width;
+      top: 0rem;
+    }
+
+    100% {
+      top: 0rem;
+      transform: rotate(-35deg);
+      transform-origin: left;
+      width: calc(#{$hamburger-width} / 2);
+    }
+}
+
+@keyframes botToArrow {
+    0% { top: 1rem; }
+
+    50% {
+      transform: rotate(0);
+      width: $hamburger-width;
+      top: 0rem;
+    }
+
+    100% {
+      top: 0rem;
+      transform: rotate(35deg);
+      transform-origin: left;
+      width: calc(#{$hamburger-width} / 2);
+    }
+}
+
+@keyframes arrowToTop {
+    0% {
+      opacity: 0;
+      top: 0rem;
+      transform: rotate(-35deg);
+      transform-origin: left;
+      width: calc(#{$hamburger-width} / 2);
+    }
+
+    49% { opacity: 0; }
+    100% { top: -1rem; }
+}
+
+@keyframes arrowToBot {
+    0% {
+      opacity: 0;
+      top: 0rem;
+      transform: rotate(35deg);
+      transform-origin: left;
+      width: calc(#{$hamburger-width} / 2);
+    }
+    49% { opacity: 0; }
+    100% { top: 1rem; }
+}

@@ -1,0 +1,21 @@
+// THEME COLORS
+$color-black: #000000;
+$color-grey: #777777;
+$color-grey-light: #aaaaaa;
+$color-white: #ffffff;
+
+// BOXING AND GRID SIZES
+$drawer-width: 80vw;
+$hamburger-width: 4rem;
+$header-height: 20vh;
+$main-margin-top: 5rem;
+$nav-list-padding: 3rem;
+$row-gutter: 5rem;
+
+// FONTS
+$nav-link-font-size: 2.2rem;
+$nav-group-heading: 3rem;
+
+// POSITIONING AND LAYERING
+$z-highest: 1000;
+$z-overlay: calc(#{$z-highest} - 2);
