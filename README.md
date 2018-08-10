@@ -40,7 +40,7 @@ Will start `node-sass` in watch mode and start a local server on port 3000. As t
 There are a few major topics that this project explores:
 - [Checkbox Inputs and Labels](#inputs-and-labels)
 - [SCSS Scaffold](#scss-skeleton)
-- [Using Pseudo classes](#styling-the-hamburger-with-::before-and-::after)
+- [Using Pseudo classes](#styling-the-hamburger-with-before-and-after)
 - [leveraging SCSS Variabes](#using-variables)
 - [:checked and Sibling Selectors](#checked-and-sibling-selectors)
 - [Selecing Drawer States](#selecting-drawer-states)
