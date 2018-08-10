@@ -5,10 +5,10 @@ const path = require('path')
 
 const app = express()
 
-app.use(express.static('gh-pages'))
+app.use(express.static('docs'))
 
 app.get('/', (req, res, next) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'docs', 'index.html'))
 })
 
 const server = http.createServer(app)

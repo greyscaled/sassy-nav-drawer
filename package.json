@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "A Navigation Drawer built with pure CSS",
   "scripts": {
-    "clean": "rimraf *.css gh-pages/*.css",
+    "clean": "rimraf *.css docs/*.css",
     "compile": "node-sass sass/main.scss style.compiled.css",
     "prefix": "postcss style.compiled.css --use autoprefixer -o style.prefixed.css",
-    "compress": "node-sass --output-style compressed style.prefixed.css gh-pages/style.css",
+    "compress": "node-sass --output-style compressed style.prefixed.css docs/style.css",
     "clean:intermediates": "rimraf *.compiled.css *.prefixed.css",
     "build": "npm run clean && npm run compile && npm run prefix && npm run compress && npm run clean:intermediates",
-    "dev": "concurrently \"node server.js\" \"node-sass sass/main.scss gh-pages/style.css --watch\"",
+    "dev": "concurrently \"node server.js\" \"node-sass sass/main.scss docs/style.css --watch\"",
     "start": "concurrently \"node server.js\" \"start chrome http://localhost:3000/ --exit\""
   },
   "repository": {
