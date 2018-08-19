@@ -11,6 +11,8 @@ Read about [C.S Weekly here](https://medium.com/@vapurrmaid/code-something-weekl
 
 ![DEMO](https://i.imgur.com/rmIpYNG.gif)
 
+[CLIK HERE FOR LIVE DEMO](https://vapurrmaid.github.io/sassy-nav-drawer/)
+
 ## Installation
 
 ```bash
