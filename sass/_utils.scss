@@ -16,5 +16,5 @@
 	margin: 0 auto;
 	&:not(:last-child) { margin-bottom: $row-gutter; }
 
-	max-width: 50rem; // todo
+	max-width: 50rem;
 }
